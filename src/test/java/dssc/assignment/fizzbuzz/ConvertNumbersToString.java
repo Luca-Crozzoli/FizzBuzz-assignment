@@ -19,4 +19,10 @@ public class ConvertNumbersToString {
         FizzBuzz fizzbuzz = new FizzBuzz();
         assertEquals("2", fizzbuzz.convert(2));
     }
+
+    @Test
+    void number_41() {
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        assertEquals("41", fizzbuzz.convert(41));
+    }
 }
