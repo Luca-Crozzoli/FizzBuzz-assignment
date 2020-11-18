@@ -29,5 +29,10 @@ public class Convert {
         FizzBuzz fizzbuzz = new FizzBuzz();
         assertEquals("Buzz",fizzbuzz.convert(number));
     }
-    
+
+    @Test
+    void number_15_to_FizzBuzz() {
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        assertEquals("FizzBuzz",fizzbuzz.convert(15));
+    }
 }
