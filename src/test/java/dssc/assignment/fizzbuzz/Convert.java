@@ -18,8 +18,14 @@ public class Convert {
     }
 
     @Test
-    void number_3_to_FIzz() {
+    void number_3_to_Fizz() {
         FizzBuzz fizzbuzz = new FizzBuzz();
         assertEquals("Fizz",fizzbuzz.convert(3));
+    }
+
+    @Test
+    void number_6_to_Fizz() {
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        assertEquals("Fizz",fizzbuzz.convert(6));
     }
 }
