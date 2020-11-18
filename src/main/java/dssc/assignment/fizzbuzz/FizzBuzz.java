@@ -19,4 +19,8 @@ public class FizzBuzz {
                 System.out.println();
             }
     }
+
+    public String convert(int number) {
+        return "1";
+    }
 }
