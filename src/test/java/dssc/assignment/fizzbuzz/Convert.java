@@ -9,42 +9,30 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Convert {
 
+    private final FizzBuzz fizzbuzz = new FizzBuzz();
+
     @ParameterizedTest
     @CsvSource({"1,1","2,2","41,41"})
     void numbers_not_divisible_by_3_or_5_to_strings(int number, String expected) {
-        FizzBuzz fizzbuzz = new FizzBuzz();
         assertEquals(expected, fizzbuzz.convert(number));
     }
 
     @ParameterizedTest
     @ValueSource( ints ={3,6,24})
     void multiples_of_3_to_Fizz(int number) {
-        FizzBuzz fizzbuzz = new FizzBuzz();
         assertEquals("Fizz",fizzbuzz.convert(number));
     }
 
     @ParameterizedTest
     @ValueSource( ints ={5,10,100})
     void multiples_of_5_to_Buzz(int number) {
-        FizzBuzz fizzbuzz = new FizzBuzz();
         assertEquals("Buzz",fizzbuzz.convert(number));
     }
 
-    @Test
-    void number_15_to_FizzBuzz() {
-        FizzBuzz fizzbuzz = new FizzBuzz();
-        assertEquals("FizzBuzz",fizzbuzz.convert(15));
+    @ParameterizedTest
+    @ValueSource( ints ={15,45,75})
+    void multiples_of_3_and_5_to_FizzBuzz(int number) {
+        assertEquals("FizzBuzz",fizzbuzz.convert(number));
     }
-
-    @Test
-    void number_45_to_FizzBuzz() {
-        FizzBuzz fizzbuzz = new FizzBuzz();
-        assertEquals("FizzBuzz",fizzbuzz.convert(45));
-    }
-
-    @Test
-    void number_75_to_FizzBuzz() {
-        FizzBuzz fizzbuzz = new FizzBuzz();
-        assertEquals("FizzBuzz",fizzbuzz.convert(75));
-    }
+    
 }
