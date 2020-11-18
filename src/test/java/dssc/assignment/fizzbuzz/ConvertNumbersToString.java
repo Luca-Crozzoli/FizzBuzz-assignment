@@ -10,8 +10,13 @@ public class ConvertNumbersToString {
 
     @Test
     void number_1() {
-        //assertion
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("1", fizzBuzz.convert(1));
+    }
+
+    @Test
+    void number_2() {
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        assertEquals("2", fizzbuzz.convert(2));
     }
 }
