@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class FizzBuzz {
-
+/*
     public static void main(String[] args) {
             for (int i = 1; i <= 105; i++) {
                 if(i%3==0){
@@ -23,22 +23,26 @@ public class FizzBuzz {
                 System.out.println();
             }
     }
-
+*/
 
     public String numberToFizzBuzz(int number) {
-            if (number%15==0){
+        if (isMultipleOf(number, 15)){
                 return "FizzBuzz";
             }
-            else if (number %5==0){
+            else if (isMultipleOf(number, 5)){
                 return "Buzz";
             }
-            else if(number%3==0){
+            else if(isMultipleOf(number, 3)){
                 return "Fizz";
             }
             else {
                 return Integer.toString(number);
             }
 
+    }
+
+    private boolean isMultipleOf(int number, int divisor) {
+        return number % divisor == 0;
     }
 
     public void generateAndPrintFizzBuzzes() {
